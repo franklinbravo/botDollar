@@ -58,8 +58,10 @@ const openBrowser=async()=>{
 const airtm= ()=>{
     openBrowser().then(async(page)=>{
         try{
-            let a=await getRate(page)
-            console.log(a);
+            setTimeout(async()=>{
+                let a=await getRate(page)
+                console.log(a);
+            },3000)
             /* await page.waitForSelector(".text-6xl.pb-4.text-airtm.font-semibold")
             const result= await page.evaluate(()=>{
                 return document.querySelector(".text-6xl.pb-4.text-airtm.font-semibold")
